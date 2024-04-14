@@ -1,0 +1,27 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card-container .card {
+    margin-bottom: 20px;
+}
+.h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #333;  /* Dunkelgraue Textfarbe */
+}
+.h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #333;  /* Dunkelgraue Textfarbe */
+}
+.h3 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #333;  /* Dunkelgraue Textfarbe */
+}

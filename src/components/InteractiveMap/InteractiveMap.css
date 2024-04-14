@@ -1,0 +1,84 @@
+/* InteractiveMap.css */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.map-button {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+}
+
+.map-button:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.map-popup {
+    position: absolute;
+    background: white;
+    padding: 10px;
+    border: 1px solid black;
+    z-index: 1000;
+    width: 200px;
+    transform: translate(-50%, -50%);
+}
+
+#button-graz {
+    top: 50%;
+    left: 50%;
+}
+
+#button-ausseerland {
+    top: 40%;
+    left: 40%;
+}
+
+#button-erzberg-leoben {
+    top: 45%;
+    left: 60%;
+}
+
+#button-gesaeuse {
+    top: 30%;
+    left: 40%;
+}
+
+#button-hochsteiermark {
+    top: 20%;
+    left: 60%;
+}
+
+#button-murau {
+    top: 25%;
+    left: 35%;
+}
+
+#button-murtal {
+    top: 40%;
+    left: 30%;
+}
+
+#button-oststeiermark {
+    top: 65%;
+    left: 55%;
+}
+
+#button-schladming-dachstein {
+    top: 10%;
+    left: 50%;
+}
+
+#button-suedsteiermark {
+    top: 75%;
+    left: 45%;
+}
+
+#button-thermen-vulkanland {
+    top: 70%;
+    left: 50%;
+}

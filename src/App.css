@@ -1,0 +1,16 @@
+/* Beispiel-Styles */
+body, html, #root, .App {
+    height: 100%;
+    margin: 0;
+}
+
+header, footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+main {
+    padding: 1em;
+}

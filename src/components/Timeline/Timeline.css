@@ -1,0 +1,25 @@
+.timeline-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+}
+
+.event-container {
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.event-year {
+    font-weight: bold;
+    color: #333;
+}
+
+.event-description {
+    font-size: 14px;
+    color: #666;
+}
