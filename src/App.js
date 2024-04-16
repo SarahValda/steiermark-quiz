@@ -8,7 +8,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import GeschichteModule from './components/GeschichteModule/GeschichteModule';
 import KulinarikModule from './components/KulinarikModule/KulinarikModule';
-//import PersoenlichkeitenModule from './components/PersoenlichkeitenModule/PersoenlichkeitenModule';
+import PersoenlichkeitenModule from './components/PersoenlichkeitenModule/PersoenlichkeitenModule';
 //import GeografieModule from './components/GeografieModule';
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
                     <Route path="/" element={<Home />} exact />
                     <Route path="/geschichte" element={<GeschichteModule />} />
                     <Route path="/kulinarik" element={<KulinarikModule />} />
+                    <Route path="/persoenlichkeiten" element={<PersoenlichkeitenModule />} />
                     {/* Weitere Routen für andere Module */}
                 </Routes>
             </main>

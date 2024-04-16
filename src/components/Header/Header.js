@@ -10,6 +10,7 @@ function Header() {
                 <Link to="/">Home</Link>
                 <Link to="/geschichte">Geschichte</Link>
                 <Link to="/kulinarik">Kulinarik</Link>
+                <Link to="/persoenlichkeiten">Persönlichkeiten</Link>
                 {/* Weitere Links hinzufügen */}
             </div>
         </div>
