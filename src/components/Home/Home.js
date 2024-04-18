@@ -10,7 +10,7 @@ function Home() {
             <h2 className="quiz-subtitle">Entdecken Sie die Schönheit und Geschichte der Steiermark</h2>
             <div className="card-container">
                 <Card className="custom-card">
-                    <Card.Img variant="top" src="geschichte.jpg" />
+                    <Card.Img variant="top" src="/images/geschichte.jpg" />
                     <Card.Body>
                         <Card.Title className="module-title">Geschichte der Steiermark</Card.Title>
                         <Card.Text>
@@ -22,7 +22,7 @@ function Home() {
                     </Card.Body>
                 </Card>
                 <Card className="custom-card">
-                    <Card.Img variant="top" src="kulinarik.jpg" />
+                    <Card.Img variant="top" src="/images/kulinarik.jpg" />
                     <Card.Body>
                         <Card.Title className="module-title">Kulinarik der Steiermark</Card.Title>
                         <Card.Text>
@@ -34,7 +34,7 @@ function Home() {
                     </Card.Body>
                 </Card>
                 <Card className="custom-card">
-                    <Card.Img variant="top" src="persoenlichkeiten.jpg" />
+                    <Card.Img variant="top" src="/images/persoenlichkeiten.jpg" />
                     <Card.Body>
                         <Card.Title className="module-title">Bekannte Persönlichkeiten</Card.Title>
                         <Card.Text>

@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Interactive Styria Quiz
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Creator
 
-## Available Scripts
+- **Name:** Sarah Valda (https://github.com/SarahValda)
+- **Contact:** sarah.valda@outlook.com
 
-In the project directory, you can run:
+## Introduction
 
-### `npm start`
+Welcome to the Interactive Styria Quiz! This platform is designed to provide a fun and educational experience about the region of Styria. It combines interactive maps, timelines, and quizzes to bring the history, geography, and culture of this area to life.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Mission
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+My aim is to offer an engaging and informative experience that appeals to users of all ages. Whether you are from Styria, living there, or simply wish to learn more about this enchanting region of Austria, this quiz will entertain and enlighten you.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Thematic modules covering history, geography, culture, and notable personalities
+- Interactive timelines to sequence historical events
+- In-depth quiz questions following each module
+- Responsive design ensuring a seamless experience on various devices
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To get started with the quiz, clone the repository and install all necessary dependencies.
+These dependencies were used in this project, which you can install using npm: 
+- react bootstrap (npm install react-bootstrap)
+- bootstrap (npm install bootstrap)
+- react-router-dom (npm install react-router-dom)
+- react-beautiful-dnd (npm install react-beautiful-dnd --save)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/SarahValda/steiermark-quiz
+cd styria-quiz
+npm install
+````
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Built With
+- HTML
+- CSS
+- JavaScript
+- React 
 
-### `npm run eject`
+## Tested Browsers
+The application has been tested on the following browsers:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Chrome (Desktop & Mobile)
+- Firefox (Desktop)
+- Safari (Mobile)
+- Edge (Desktop)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Warnings and Browser Errors
+- Ensure CORS policies are respected when fetching external resources.
+- Browser console might show warnings about performance for non-passive event listeners. This is due to third-party libraries and should be addressed in future library updates.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Learnings
+Throughout the development of this project, key learnings were:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Optimizing performance across different browsers and devices.
+- Ensuring a consistent and smooth user experience through responsive design.
+- Structuring a project in a maintainable and scalable way.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We hope that you have enjoyed using the app and that it has provided you with valuable insights into the fascinating region of Styria. Happy learning!
