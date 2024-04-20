@@ -1,42 +1,65 @@
-/* Home.css */
-
-/* Stil für die Überschrift des Quiz */
 .quiz-title {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    color: #333; /* Schwarze Farbe */
+    margin-top: 50px; /* Abstand zwischen Foto-Banner und Überschrift */
+    font-family: "Segoe UI", sans-serif; /* Beispiel für eine moderne Schriftart */
+    font-size: 36px; /* Größe der Überschrift */
+    color: #004d40; /* Textfarbe */
+    text-transform: uppercase; /* Großschreibung */
+    letter-spacing: 2px; /* Abstand zwischen den Buchstaben */
+    text-align: center;  /* Schwarze Farbe */
 }
 
-/* Unterüberschrift für das Quiz */
 .quiz-subtitle {
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 1.5rem;
+    margin-bottom: 1px;
+    font-size: 1.6rem;
     color: #666; /* Dunkelgraue Farbe */
 }
 
-/* Container für die Cards */
+.h2 {
+    margin-top: 15px; /* Abstand zwischen Foto-Banner und Überschrift */
+    font-family: "Segoe UI", sans-serif; /* Beispiel für eine moderne Schriftart */
+    font-size: 34px; /* Größe der Überschrift */
+    color: #004d40; /* Textfarbe */
+    text-transform: uppercase; /* Großschreibung */
+    letter-spacing: 1px; /* Abstand zwischen den Buchstaben */
+    text-align: center; /* Zentrieren der Überschrift */
+}
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-/* Stil für die Cards */
 .custom-card {
-    width: 300px;
+    max-width: 300px; /* Keep the max-width */
+    width: 100%; /* Make width 100% */
     margin: 20px;
+    display: flex; /* Add display flex */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center;
 }
 
-/* Stil für die Überschrift der Module */
 .module-title {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* You can keep this as is or use vw for responsiveness */
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    text-align: center; /* Center align the text */
 }
 
-/* Stil für den Button innerhalb der Cards */
+.module-text {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
 .custom-card .btn-primary {
-    width: 100%;
+    width: 60%; /* Set button width to 100% */
+    margin: auto; /* Center the button in the card if there's a specific width less than 100% */
+    display: block;
+    background-color: #218838;
+    border: none;
 }

@@ -1,0 +1,10 @@
+/* Add this CSS to your styles */
+.footer {
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: darkslategrey; /* Or any other color */
+    color: white; /* Or any other color */
+    text-align: center;
+}

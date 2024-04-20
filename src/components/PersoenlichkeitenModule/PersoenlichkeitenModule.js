@@ -7,7 +7,7 @@ import quizData from '../../data/quizData';
 function PersoenlichkeitenModule() {
     return (
         <div className="module geschichte">
-            <h2>Bekannte Persönlichkeite aus der Steiermark</h2>
+            <h2 className="h2">Bekannte Persönlichkeite aus der Steiermark</h2>
             <FamousPeopleQuiz />
             <QuizModule title="Persöhnlichkeiten-Quiz" questions={quizData.persoenlichkeiten} />
         </div>

@@ -15,6 +15,7 @@ const initialEvents = [
 function Timeline() {
     const [events, setEvents] = useState([...initialEvents]);
     const [validationResult, setValidationResult] = useState('');
+    const [resultColor, setResultColor] = useState('');
 
     const onDragEnd = (result) => {
         const { source, destination } = result;
@@ -33,46 +34,55 @@ function Timeline() {
         const correctOrder = [...initialEvents].sort((a, b) => a.year - b.year).map(event => event.year);
         if (JSON.stringify(currentOrder) === JSON.stringify(correctOrder)) {
             setValidationResult('Richtig! Die Anordnung ist korrekt.');
+            setResultColor('green-text');
         } else {
             setValidationResult('Leider falsch. Versuche es bitte erneut.');
+            setResultColor('red-text');
         }
     };
 
     const resetGame = () => {
-        setEvents([...initialEvents]); // Setzt die Ereignisse auf ihre ursprüngliche Reihenfolge zurück
-        setValidationResult(''); // Löscht das Ergebnis der Überprüfung
+        setEvents([...initialEvents]);
+        setValidationResult('');
     };
 
     return (
-        <div className="timeline-container">
-            <h1>Tauche ein in die Geschichte der Steiermark</h1>
-            <p>Teste dein Wissen: Bringe die historischen Ereignisse in die richtige Reihenfolge beginnend mit dem frühesten Ereignis.</p>
-            <DragDropContext onDragEnd={onDragEnd}>
-                <Droppable droppableId="events">
-                    {(provided) => (
-                        <div {...provided.droppableProps} ref={provided.innerRef}>
-                            {events.map((event, index) => (
-                                <Draggable key={event.id} draggableId={event.id} index={index}>
-                                    {(provided) => (
-                                        <div
-                                            ref={provided.innerRef}
-                                            {...provided.draggableProps}
-                                            {...provided.dragHandleProps}
-                                            className="event-card"
-                                        >
-                                            {event.description} ({event.year})
-                                        </div>
-                                    )}
-                                </Draggable>
-                            ))}
-                            {provided.placeholder}
-                        </div>
-                    )}
-                </Droppable>
-            </DragDropContext>
-            <button onClick={checkOrder} className="verify-button">Bestätigung der Anordnung</button>
-            <button onClick={resetGame} className="reset-button">Spiel zurücksetzen</button>
-            {validationResult && <p className="validation-result">{validationResult}</p>}
+        <div>
+            <p className="quiz-subtitle">Teste dein Wissen: Bringe die historischen Ereignisse in die richtige Reihenfolge beginnend mit dem
+                frühesten Ereignis.</p>
+            <div className="timeline-container">
+                <DragDropContext onDragEnd={onDragEnd}>
+                    <Droppable droppableId="events">
+                        {(provided) => (
+                            <div {...provided.droppableProps} ref={provided.innerRef}>
+                                {events.map((event, index) => (
+                                    <Draggable key={event.id} draggableId={event.id} index={index}>
+                                        {(provided) => (
+                                            <div
+                                                ref={provided.innerRef}
+                                                {...provided.draggableProps}
+                                                {...provided.dragHandleProps}
+                                                className="event-card"
+                                            >
+                                                {event.description}
+                                            </div>
+                                        )}
+                                    </Draggable>
+                                ))}
+                                {provided.placeholder}
+                            </div>
+                        )}
+                    </Droppable>
+                </DragDropContext>
+                <div className="timeline-image-container">
+                    <img src="/images/timeline.png" alt="Timeline" className="timeline-image"/>
+                </div>
+                <div className="button-container">
+                    <button onClick={checkOrder} className="verify-button">Bestätigung der Anordnung</button>
+                    <button onClick={resetGame} className="reset-button">Spiel zurücksetzen</button>
+                </div>
+                {validationResult && <p className={`validation-result ${resultColor}`}>{validationResult}</p>}
+            </div>
         </div>
     );
 }
