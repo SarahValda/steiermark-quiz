@@ -1,0 +1,13 @@
+.module-kulinarik {
+    text-align: center; /* Überschrift und Inhalt zentrieren */
+    padding: 20px; /* Abstand um den Inhalt herum */
+
+    /* Optional: Hintergrundbild für den Foto-Banner */
+    /*background-image: url('url_zum_bild.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px; /* Höhe des Foto-Banners */
+
+    /* Optional: Stil für die Überschrift */
+    color: #004d40; /* Textfarbe weiß */
+}

@@ -1,0 +1,104 @@
+.memory-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    background-color: #f0f0f0;
+    font-family: "Segoe UI", sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 150px); /* 4 Spalten, anpassbar je nach Anzahl der Karten */
+    grid-gap: 20px;
+    margin-bottom: 20px; /* Geringerer Abstand unterhalb der Karten */
+}
+
+.memory-card {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    perspective: 1000px; /* Tiefe für die Flip-Animation */
+    cursor: pointer;
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.front-face {
+    background-color: white;
+    transform: rotateY(180deg);
+    z-index: 2;
+}
+
+.back-face {
+    background-color: darkgreen;
+    transform: rotateY(0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+.memory-card.flipped .front-face {
+    transform: rotateY(0deg);
+}
+
+.memory-card.flipped .back-face {
+    transform: rotateY(-180deg);
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 100;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+@media (max-width: 600px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, 120px);
+    }
+    .memory-card {
+        width: 120px;
+        height: 120px;
+    }
+    .front-face, .back-face {
+        border-radius: 5px;
+    }
+    button {
+        font-size: 14px;
+    }
+}

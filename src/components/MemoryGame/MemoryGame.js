@@ -1,84 +1,91 @@
 import React, { useState, useEffect } from 'react';
-//import './MemoryGame.css';
+import './MemoryGame.css';
+import peopleData from "../../data/peopleData";
 
-const MemoryGame = ({ cards }) => {
-    // Zustand für das aktuelle Spiel
+const MemoryGame = () => {
     const [openCards, setOpenCards] = useState([]);
     const [matched, setMatched] = useState([]);
     const [moves, setMoves] = useState(0);
+    const [cards, setCards] = useState([]);
+    const [showPopup, setShowPopup] = useState(false);
+    const [popupContent, setPopupContent] = useState({});
 
-    // Funktion zum Mischen der Karten
+    useEffect(() => {
+        shuffleCards();
+    }, []);
+
     const shuffleCards = () => {
-        const shuffledCards = [...cards, ...cards]
-            .sort(() => Math.random() - 0.5)
-            .map((card) => ({ ...card, id: Math.random() }));
+        const formattedCards = peopleData.reduce((acc, item) => [
+            ...acc,
+            { ...item, src: item.src1, id: Math.random() },
+            { ...item, src: item.src2, id: Math.random() }
+        ], []);
 
+        const shuffledCards = formattedCards.sort(() => Math.random() - 0.5);
+        setCards(shuffledCards);
         setMatched([]);
         setOpenCards([]);
         setMoves(0);
-        return shuffledCards;
     };
 
-    // Zustand für die gemischten Karten
-    const [shuffledCards, setShuffledCards] = useState(shuffleCards);
+    const handleCardClick = index => {
+        if (!openCards.includes(index) && openCards.length < 2) {
+            const newOpenCards = [...openCards, index];
+            setOpenCards(newOpenCards);
 
-    // Klick-Handler
-    const handleCardClick = (index) => {
-        if (openCards.length === 1 && !openCards.includes(index)) {
-            setMoves(moves + 1);
-            setOpenCards([...openCards, index]);
-        } else if (openCards.length === 0) {
-            setOpenCards([index]);
+            if (newOpenCards.length === 2) {
+                const [firstIndex, secondIndex] = newOpenCards;
+                const firstCard = cards[firstIndex];
+                const secondCard = cards[secondIndex];
+
+                if (firstCard.name === secondCard.name) {
+                    setMatched([...matched, firstCard.src, secondCard.src]);
+                    setPopupContent({
+                        name: firstCard.name,
+                        description: firstCard.description
+                    });
+
+                    setTimeout(() => {
+                        setShowPopup(true);
+                    }, 500);
+
+                }
+                setTimeout(() => {
+                    setOpenCards([]);
+                }, 1000);
+                setMoves(moves + 1);
+            }
         }
     };
 
-    // Überprüfung der Karten nach dem Öffnen
-    useEffect(() => {
-        if (openCards.length === 2) {
-            const firstMatch = shuffledCards[openCards[0]];
-            const secondMatch = shuffledCards[openCards[1]];
-
-            if (firstMatch.src === secondMatch.src) {
-                setMatched([...matched, firstMatch.src]);
-            }
-
-            if (openCards.length === 2) {
-                setTimeout(() => setOpenCards([]), 800);
-            }
-        }
-    }, [openCards]);
-
-    // Neustart des Spiels
-    const restartGame = () => {
-        setShuffledCards(shuffleCards());
+    const closePopup = () => {
+        setShowPopup(false);
     };
 
     return (
-        <div className="memory-game">
-            <button onClick={restartGame}>Neustart</button>
-            <div className="cards-grid">
-                {shuffledCards.map((card, index) => {
-                    let isFlipped = false;
-                    if (openCards.includes(index)) isFlipped = true;
-                    if (matched.includes(card.src)) isFlipped = true;
-
-                    return (
-                        <div
-                            className={`memory-card ${isFlipped ? 'flipped' : ''}`}
-                            key={card.id}
-                            onClick={() => handleCardClick(index)}
-                        >
-                            <img className="front-face" src={card.src} alt={card.name} />
-                            <div className="back-face">?</div>
-                        </div>
-                    );
-                })}
-            </div>
-            {matched.length === cards.length && (
-                <div className="winner-message">
-                    Glückwunsch! Du hast alle Paare mit {moves} Zügen gefunden.
+        <div>
+            <p className="quiz-subtitle">Entdecke die Gesichter der Steiermark – Wer verbirgt sich hinter den Karten?</p>
+            <div className="memory-game">
+                <div className="cards-grid">
+                    {cards.map((card, index) => {
+                        let isFlipped = matched.includes(card.src) || openCards.includes(index);
+                        return (
+                            <div className={`memory-card ${isFlipped ? 'flipped' : ''}`} key={card.id} onClick={() => handleCardClick(index)}>
+                                <img className="front-face" src={card.src} alt={card.name} />
+                                <div className="back-face">?</div>
+                            </div>
+                        );
+                    })}
                 </div>
-            )}
+                {showPopup && (
+                    <div className="popup">
+                        <h2>{popupContent.name}</h2>
+                        <p>{popupContent.description}</p>
+                        <button onClick={closePopup}>Schließen</button>
+                    </div>
+                )}
+                <button onClick={shuffleCards}>Neustart</button>
+            </div>
         </div>
     );
 };

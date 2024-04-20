@@ -1,4 +1,3 @@
-// src/data/kulinarikData.js
 const kulinarikData = {
     regions: [
         {
@@ -6,26 +5,26 @@ const kulinarikData = {
             name: 'Region Graz',
             specialty: {
                 name: 'Grazer Krauthäuptel',
-                description: 'Grazer Krauthäuptel ist eine Salatsorte, die besonders in Graz beliebt ist.',
+                description: 'Der Grazer Krauthäuptel (mundartlich Grazer Krauthappel) ist eine kopfbildende Salatsorte mit Milchsaft, die sich aus dem Laibacher Eissalat entwickelt hat.',
                 image: '/images/grazer-krauthaeuptel.jpg'
             }
         },
         {
             id: 'ausseerland',
-            name: 'Ausseerland',
+            name: 'Ausseerland-Salzkammergut',
             specialty: {
-                name: 'Ausseer Forelle',
-                description: 'Frische Forellen aus den klaren Gewässern des Ausseerlandes, traditionell zubereitet.',
-                image: '/images/ausseer-forelle.jpg'
+                name: 'Ausseer Seesaibling',
+                description: 'Der Ausseerland Seesaibling ist für sein festes und gleichzeitig zartes Fleisch bekannt. Das typische Merkmal, die hellrosa Färbung, verdankt es dem speziellen Plankton der Seen.',
+                image: '/images/ausseer-seesaibling.jpg'
             }
         },
         {
             id: 'erzberg-leoben',
             name: 'Erzberg-Leoben',
             specialty: {
-                name: 'Erzberger Bier',
-                description: 'Ein starkes, dunkles Bier aus der Erzberg-Region, gebraut mit einzigartigen Malzsorten.',
-                image: '/images/erzberger-bier.jpg'
+                name: 'Gösser Bier',
+                description: 'Hell, dunkel, mit Alkoholgehalt oder auch alkoholfrei – das Bierangebot in Erzberg-Leoben ist so vielfältig wie die Region selbst. Nicht eine, sondern gleich zwei Braustätten erzeugen das beliebte Hopfengetränk.',
+                image: '/images/goesser-bier.webp'
             }
         },
         {
@@ -33,7 +32,7 @@ const kulinarikData = {
             name: 'Gesäuse',
             specialty: {
                 name: 'Gesäuse Wild',
-                description: 'Wildgerichte aus dem Nationalpark Gesäuse, bekannt für ihre Exzellenz.',
+                description: 'Wildbret aus dem Gesäuse ist ein hochwertiges Lebensmittel. Es ist fettarm, reich an leicht verdaulichem Eiweiß, hat eine feinfaserige Muskulatur und zeichnet sich durch einen angenehmen Geschmack aus.',
                 image: '/images/gesaeuse-wild.jpg'
             }
         },
@@ -41,63 +40,64 @@ const kulinarikData = {
             id: 'hochsteiermark',
             name: 'Hochsteiermark',
             specialty: {
-                name: 'Hochsteirischer Apfelstrudel',
-                description: 'Ein traditionell gemachter Apfelstrudel aus Äpfeln der Hochsteiermark.',
-                image: '/images/hochsteirischer-apfelstrudel.jpg'
+                name: 'Mariazeller Lebkuchen',
+                description: 'Ein süßer Duft nach Honig, Gewürzen und Lebkuchen liegt in der Mariazeller Luft. Denn hier wird seit mehr als 300 Jahren der einzigartige Mariazeller Honiglebkuchen gebacken.',
+                image: '/images/mariazeller-lebkuchen.jpg'
             }
         },
         {
             id: 'murau',
             name: 'Murau',
             specialty: {
-                name: 'Murauer Lamm',
-                description: 'Lammfleischgerichte, lokal aufgezogen und zubereitet in der Region Murau.',
-                image: '/images/muraner-lamm.jpg'
+                name: 'Honig',
+                description: 'Auch die Bienen fühlen sich in der Region Murau wohl. Regionale Imker produzieren aus dem Kulinarik- und Gesundheitsprodukt wohlschmeckenden Honig, Propolis und Cremes. ',
+                image: '/images/murauer-honig.jpg'
             }
         },
         {
             id: 'murtal',
             name: 'Murtal',
             specialty: {
-                name: 'Murtaler Steirerkäse',
-                description: 'Der Murtaler Steirerkäse ist ein herzhafter, gereifter Käse, der in der Region Murtal produziert wird.',
-                image: '/images/murtaler-steirerkaese.jpg'
+                name: 'Zirbenschnaps',
+                description: 'Die Zirbe ist ein seltener Baum aus der Familie der Kiefern und vor allem in den Alpen beheimatet. Aus den Früchten des Baumes, den Zirbenzapfen, wird in aufwändiger Arbeit der Zirbenschnaps gewonnen.',
+                image: '/images/murtaler-zirbe.webp'
             }
         },
         {
             id: 'oststeiermark',
             name: 'Oststeiermark',
             specialty: {
-                name: 'Oststeirischer Kürbiskernkuchen',
-                description: 'Der Kürbiskernkuchen ist ein beliebtes Dessert in der Oststeiermark, das reichlich mit lokalen Kürbiskernen bestreut wird.',
-                image: '/images/oststeirischer-kuerbiskernkuchen.jpg'
+                name: 'Pöllauer Hirschbirne',
+                description: 'Die Pöllauer Hirschbirne ist eine alte steirische Sorte, hat eine rundliche Form und einen herbsüßen Geschmack und eignet sich hervorragend für Säfte, Edelbrände, Essig und Marmeladen.',
+                image: '/images/poellauer-hirschbirne.webp'
             }
         },
         {
             id: 'schladming-dachstein',
             name: 'Schladming-Dachstein',
             specialty: {
-                name: 'Schladminger Bierkäse',
-                description: 'Der Bierkäse aus Schladming ist bekannt für seinen kräftigen Geschmack und die cremige Textur.',
-                image: '/images/schladminger-bierkaese.jpg'
+                name: 'Ennstaler Steirerkas',
+                description: 'Der Ennstaler Steirerkas wird aus eigens dafür gereiftem Magertopfen – nach traditionellem Rezept hergestellt. In Geruch und Geschmack ist der Ennstaler Steirerkas würzig-pikant.',
+                image: '/images/ennstaler-steirerkas.jpg'
             }
         },
         {
             id: 'suedsteiermark',
             name: 'Südsteiermark',
             specialty: {
-                name: 'Südsteirisches Weinschnitzel',
-                description: 'Das Weinschnitzel ist ein typisches Gericht der Südsteiermark, mariniert mit lokalem Weißwein.',
-                image: '/images/suedsteirisches-weinschnitzel.jpg'
+                name: 'Südsteirischer Wein',
+                description: 'Die reichhaltigen Böden, das mild-mediterrane Klima, die einzigartigen Lagen und die hohe Kunst der Vinifizierung verleihen den südsteirischem Weinen die berühmte, reichhaltige Aromatik. ',
+                image: '/images/suedsteirischer-wein.webp'
             }
         },
         {
             id: 'thermen-vulkanland',
             name: 'Thermen- & Vulkanland',
             specialty: {
-                name: 'Vulkanland Schinken',
-                description: 'Der Vulkanland Schinken ist ein luftgetrockneter Schinken, der für seinen intensiven Geschmack und seine feste Textur bekannt ist.',
-                image: '/images/vulkanland-schinken.jpg'
+                name: 'Steirische Käferbohne',
+                description: 'Eine feincremige Konsistenz und ein zart nusssiger Geschmack zeichnen die Käferbohne aus.\n' +
+                    'Die Qualität der steirischen Käferbohnen beruht auf dem Zusammenspiel zwischen den idealen Gegebenheiten in der Südoststeiermark, dem Fachwissen an Anbau und die an die Umwelt optimal angepassten Sorten.',
+                image: '/images/steirische-kaeferbohne.jpg'
             }
         }
     ]

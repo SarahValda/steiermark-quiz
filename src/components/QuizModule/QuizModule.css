@@ -1,35 +1,67 @@
+/* Grundlegendes Styling für das gesamte Quizmodul */
 .quiz-module {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    font-family: "Segoe UI", sans-serif;
+    padding: 10px; /* Reduziert von 20px */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 10px auto; /* Reduziert und zentriert das Modul */
+}
+
+h2, h3 {
+    color: #333;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Styling für Fragen und Ergebnisse */
+.question, .results {
+    text-align: center;
     margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
 }
 
-.question p {
-    margin: 10px 0;
+.question p, .results p {
+    font-size: 18px;
+    color: #666;
 }
 
+/* Button-Styling */
 button {
-    margin: 5px;
     padding: 10px 20px;
-    background-color: #007bff;
+    font-size: 16px;
     color: white;
+    background-color: #007BFF;
     border: none;
     border-radius: 5px;
+    margin: 10px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-.results {
-    margin-top: 20px;
+/* Ergebnisdetails */
+.result-detail {
+    background-color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.result-detail {
-    background-color: #e9e9e9;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-left: 5px solid #4CAF50;
+.result-detail p {
+    color: #333;
+}
+
+/* Stil für die Anzeige der korrekten und falschen Antworten */
+.correct-answer {
+    color: green;
+}
+
+.wrong-answer {
+    color: red;
 }
