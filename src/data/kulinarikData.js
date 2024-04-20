@@ -1,4 +1,3 @@
-// src/data/kulinarikData.js
 const kulinarikData = {
     regions: [
         {

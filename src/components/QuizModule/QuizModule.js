@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './QuizModule.css'; // Stellen Sie sicher, dass der Pfad zur CSS-Datei korrekt ist
 
 function QuizModule({ title, questions }) {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -46,8 +47,9 @@ function QuizModule({ title, questions }) {
                         {userAnswers.map((userAnswer, index) => (
                             <div key={index} className="result-detail">
                                 <p>{userAnswer.question}</p>
-                                <p>Deine Antwort: {userAnswer.answer}</p>
-                                <p>Richtige Antwort: {userAnswer.correctAnswer}</p>
+                                <p className={userAnswer.answer === userAnswer.correctAnswer ? "correct-answer" : "wrong-answer"}>
+                                    Deine Antwort: {userAnswer.answer} (Richtige Antwort: {userAnswer.correctAnswer})
+                                </p>
                             </div>
                         ))}
                     </div>
