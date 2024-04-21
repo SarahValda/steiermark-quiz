@@ -1,4 +1,3 @@
-// src/components/GeschichteModule.js
 import React from 'react';
 import MemoryGame from "../MemoryGame/MemoryGame";
 import QuizModule from '../QuizModule/QuizModule';

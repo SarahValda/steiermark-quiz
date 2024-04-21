@@ -3,7 +3,7 @@
     justify-content: center;
     position: relative;
     width: 100%;
-    height: auto;
+    height: auto; /* Höhe kann angepasst werden, wenn notwendig */
     margin-top: 40px;
 }
 
@@ -30,7 +30,7 @@
     border: 1px solid black;
     border-radius: 7px;
     z-index: 1000;
-    width: 230px;
+    width: 230px; /* Beachte die Größe auf kleinen Bildschirmen */
     transform: translate(-50%, -50%);
 }
 
@@ -87,4 +87,31 @@
 #button-thermen-vulkanland {
     top: 76%;
     left: 64%;
+}
+/* Tablets (mindestens 600px) */
+@media (min-width: 600px) {
+    .map-container {
+        height: 400px; /* Festes Höhenmaß für bessere Kontrolle auf größeren Bildschirmen */
+    }
+    .map-button {
+        font-size: small; /* Anpassung der Schriftgröße für bessere Lesbarkeit */
+        padding: 5px 10px; /* Größeres Padding für bessere Interaktivität */
+    }
+    .map-popup {
+        width: 250px; /* Größeres Popup für mehr Inhalt */
+    }
+}
+
+/* Desktops (mindestens 900px) */
+@media (min-width: 900px) {
+    .map-container {
+        height: 600px; /* Größere feste Höhe für Desktop-Ansichten */
+    }
+    .map-button {
+        font-size: medium; /* Zurück zur ursprünglichen Schriftgröße */
+        padding: 5px 9px; /* Weiter erhöhtes Padding */
+    }
+    .map-popup {
+        width: 300px; /* Weitere Erhöhung der Popup-Breite */
+    }
 }

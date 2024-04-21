@@ -36,7 +36,7 @@ function Timeline() {
             setValidationResult('Richtig! Die Anordnung ist korrekt.');
             setResultColor('green-text');
         } else {
-            setValidationResult('Leider falsch. Versuche es bitte erneut.');
+            setValidationResult('Leider falsch. Versuche es bitte noch einmal.');
             setResultColor('red-text');
         }
     };
@@ -78,8 +78,8 @@ function Timeline() {
                     <img src="/images/timeline.png" alt="Timeline" className="timeline-image"/>
                 </div>
                 <div className="button-container">
-                    <button onClick={checkOrder} className="verify-button">Bestätigung der Anordnung</button>
-                    <button onClick={resetGame} className="reset-button">Spiel zurücksetzen</button>
+                    <button onClick={checkOrder} className="verify-button">Bestätigen</button>
+                    <button onClick={resetGame} className="reset-button">Zurücksetzen</button>
                 </div>
                 {validationResult && <p className={`validation-result ${resultColor}`}>{validationResult}</p>}
             </div>
