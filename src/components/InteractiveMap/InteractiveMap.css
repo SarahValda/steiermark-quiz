@@ -13,7 +13,7 @@
     border: none;
     cursor: pointer;
     padding: 4px 8px;
-    border-radius: 10px;
+    border-radius: 12px;
     transition: background 0.3s ease;
     font-size: medium;
     font-weight: bold;
@@ -35,27 +35,27 @@
 }
 
 #button-graz {
-    top: 61%;
+    top: 60%;
     left: 57%;
 }
 
 #button-ausseerland {
-    top: 37%;
+    top: 35%;
     left: 33%;
 }
 
 #button-erzberg-leoben {
-    top: 51%;
+    top: 50%;
     left: 52%;
 }
 
 #button-gesaeuse {
     top: 36%;
-    left: 41%;
+    left: 40%;
 }
 
 #button-hochsteiermark {
-    top: 30%;
+    top: 29%;
     left: 57%;
 }
 
@@ -65,18 +65,18 @@
 }
 
 #button-murtal {
-    top: 51%;
-    left: 43%;
+    top: 49%;
+    left: 42%;
 }
 
 #button-oststeiermark {
-    top: 48%;
+    top: 47%;
     left: 63%;
 }
 
 #button-schladming-dachstein {
-    top: 52%;
-    left: 36%;
+    top: 51%;
+    left: 35%;
 }
 
 #button-suedsteiermark {
@@ -86,7 +86,7 @@
 
 #button-thermen-vulkanland {
     top: 76%;
-    left: 64%;
+    left: 63%;
 }
 /* Tablets (mindestens 600px) */
 @media (min-width: 600px) {
@@ -105,7 +105,7 @@
 /* Desktops (mindestens 900px) */
 @media (min-width: 900px) {
     .map-container {
-        height: 600px; /* Größere feste Höhe für Desktop-Ansichten */
+        height: auto; /* Größere feste Höhe für Desktop-Ansichten */
     }
     .map-button {
         font-size: medium; /* Zurück zur ursprünglichen Schriftgröße */
