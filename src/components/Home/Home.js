@@ -7,7 +7,7 @@ function Home() {
     return (
         <div>
             <h1 className="quiz-title">Interaktives Steiermark-Quiz</h1>
-            <h2 className="quiz-subtitle">Entdecke die Schönheit und Geschichte der Steiermark</h2>
+            <h2 className="quiz-subtitle">Entdecke Steiermark: Von majestätischen Bergen bis zu kulinarischen Köstlichkeiten – Ein interaktives Erlebnis durch Geschichte, Geografie, Kultur und bekannte Persönlichkeiten.</h2>
             <div className="card-container">
                 <Card className="custom-card">
                     <Card.Img variant="top" src="/images/geschichte.jpg" />
@@ -45,7 +45,18 @@ function Home() {
                         </Link>
                     </Card.Body>
                 </Card>
-                {/* Weitere Cards für andere Module */}
+                <Card className="custom-card">
+                    <Card.Img variant="top" src="/images/geografie.jpg" />
+                    <Card.Body>
+                        <Card.Title className="module-title">Geografie der Steiermark</Card.Title>
+                        <Card.Text className="module-text">
+                            Entdecke die Vielfalt: Von majestätischen Bergen bis zu sanften Weinbergen.
+                        </Card.Text>
+                        <Link to="/geografie">
+                            <Button variant="primary">Mehr erfahren</Button>
+                        </Link>
+                    </Card.Body>
+                </Card>
             </div>
         </div>
     );

@@ -1,0 +1,42 @@
+.quiz {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.quiz img {
+    width: 100%;
+    border-radius: 20px; /* Gerundete Ecken für die Bilder */
+    margin-bottom: 20px; /* Abstand zum Text */
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Abstand zwischen den Buttons */
+}
+
+.options button {
+    flex: 1 1 45%; /* Anpassen, um zwei Knöpfe pro Zeile darzustellen */
+    padding: 10px;
+    margin: 5px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.options button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 600px) {
+    .options button {
+        flex-basis: 90%; /* Macht Buttons breiter auf kleinen Bildschirmen */
+    }
+}

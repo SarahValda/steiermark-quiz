@@ -30,10 +30,10 @@ const peopleData = [
         description: "Österreichischer Komponist, Musiktheoretiker und Pädagoge des Barock, bekannt für sein Werk 'Gradus ad Parnassum', ein Lehrbuch über Kontrapunkt."
     },
     {
-        name: "Niki Lauda",
-        src1: "/images/niki-lauda-1.webp",
-        src2: "/images/niki-lauda-2.webp",
-        description: "Österreichischer Automobilrennfahrer und dreifacher F1 Weltmeister, geboren in Wien und aufgewachsen in der Steiermark. Bekannt für seine Comebacks nach einem schweren Unfall."
+        name: "Johann Lafer",
+        src1: "/images/johann-lafer-1.jpg", // Pfad zum ersten Bild von Johann Lafer
+        src2: "/images/johann-lafer-2.jpg", // Pfad zum zweiten Bild von Johann Lafer
+        description: "Johann Lafer ist ein österreichischer Koch, der für seine Fernsehauftritte und zahlreichen Kochbücher bekannt ist. Mit seiner leichten und kreativen Küche begeistert er ein breites Publikum und hat sich einen Namen als einer der bekanntesten Köche im deutschsprachigen Raum gemacht."
     }
 ];
 

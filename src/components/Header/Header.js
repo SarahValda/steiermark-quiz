@@ -11,7 +11,7 @@ function Header() {
                 <Link to="/geschichte">Geschichte</Link>
                 <Link to="/kulinarik">Kulinarik</Link>
                 <Link to="/persoenlichkeiten">Persönlichkeiten</Link>
-                {/* Weitere Links hinzufügen */}
+                <Link to="/geografie">Geografie</Link>
             </div>
         </div>
     );

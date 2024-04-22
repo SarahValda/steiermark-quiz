@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,7 +8,7 @@ import Footer from './components/Footer/Footer';
 import GeschichteModule from './components/GeschichteModule/GeschichteModule';
 import KulinarikModule from './components/KulinarikModule/KulinarikModule';
 import PersoenlichkeitenModule from './components/PersoenlichkeitenModule/PersoenlichkeitenModule';
-//import GeografieModule from './components/GeografieModule';
+import GeografieModule from "./components/GeografieModule/GeografieModule";
 
 function App() {
     return (
@@ -21,7 +20,7 @@ function App() {
                     <Route path="/geschichte" element={<GeschichteModule />} />
                     <Route path="/kulinarik" element={<KulinarikModule />} />
                     <Route path="/persoenlichkeiten" element={<PersoenlichkeitenModule />} />
-                    {/* Weitere Routen für andere Module */}
+                    <Route path="/geografie" element={<GeografieModule />} />
                 </Routes>
             </main>
             <Footer />
