@@ -34,7 +34,7 @@
 .reset-button {
     padding: 10px 20px;
     margin: 0 5px;
-    background-color: #28a745; /* Dunkelgrüne Farbe für Bestätigen-Button */
+    background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;

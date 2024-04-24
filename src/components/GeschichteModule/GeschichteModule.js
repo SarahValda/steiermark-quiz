@@ -1,11 +1,11 @@
 import React from 'react';
-import Timeline from '../Timeline/Timeline';  // Importiere die spezifische Timeline für Geschichte
+import Timeline from '../Timeline/Timeline';
 import QuizModule from '../QuizModule/QuizModule';
-import quizData from '../../data/quizData'; // Stelle sicher, dass hier spezifische Daten für Geschichte stehen
+import quizData from '../../data/quizData';
 
 function GeschichteModule() {
     return (
-        <div className="module geschichte">
+        <div>
             <h2 className="h2">Die Geschichte der Steiermark</h2>
             <Timeline />
             <QuizModule title="Geschichte-Quiz" questions={quizData.geschichte} />

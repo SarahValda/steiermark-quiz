@@ -8,38 +8,22 @@
     padding: 10px;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 5px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(4, 150px); /* 4 Spalten, anpassbar je nach Anzahl der Karten */
+    grid-template-columns: repeat(4, 150px);
     grid-gap: 15px;
     margin-top: 20px;
     margin-bottom: 20px;
-    padding: 0 20px; /* Fügt ein Padding hinzu, um ein wenig Platz auf den Seiten zu lassen */
+    padding: 0 20px;
 }
 
 .memory-card {
-    width: 150px; /* Grundgröße, wird in Media Queries angepasst */
-    height: 150px; /* Grundgröße, wird in Media Queries angepasst */
-    margin: 0 auto; /* Zentriert die Karten in ihren Grid-Zellen */
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
     perspective: 1000px;
     cursor: pointer;
-    transition: transform 0.3s; /* Glattere Flip-Animation */
+    transition: transform 0.3s;
 }
 
 .front-face,
@@ -93,18 +77,13 @@ button:hover {
 
 @media (max-width: 600px) {
     .cards-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Kleinere Karten für kleinere Bildschirme */
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         grid-gap: 5px;
     }
 
     .memory-card {
         width: 100px;
         height: 100px;
-    }
-
-    button {
-        padding: 8px 15px;
-        font-size: 14px; /* Kleinere Schriftgröße für bessere Lesbarkeit */
     }
 
     .popup {

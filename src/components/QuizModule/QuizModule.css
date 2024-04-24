@@ -1,38 +1,34 @@
-/* Grundlegendes Styling für das gesamte Quizmodul */
 .quiz-module {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #f4f4f4;
-    font-family: "Segoe UI", sans-serif;
-    padding: 10px; /* Reduziert von 20px */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #004d40;
+    padding: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin: 10px auto; /* Reduziert und zentriert das Modul */
+    margin: 10px auto;
+    width: 80%;
+    max-width: 900px;
 }
 
-h2, h3 {
-    color: #333;
-    font-family: "Segoe UI", sans-serif;
-}
-
-/* Styling für Fragen und Ergebnisse */
 .question, .results {
     text-align: center;
-    margin: 20px;
+    margin: 10px;
 }
 
 .question p, .results p {
-    font-size: 18px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 15px;
     color: #666;
 }
 
-/* Button-Styling */
 button {
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-    background-color: #007BFF;
+    background-color: #28a745;
     border: none;
     border-radius: 5px;
     margin: 10px;
@@ -41,10 +37,9 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #218838;
 }
 
-/* Ergebnisdetails */
 .result-detail {
     background-color: white;
     padding: 10px;
@@ -54,14 +49,43 @@ button:hover {
 }
 
 .result-detail p {
-    color: #333;
+    color: #666;
 }
 
-/* Stil für die Anzeige der korrekten und falschen Antworten */
 .correct-answer {
     color: green;
 }
 
 .wrong-answer {
     color: red;
+}
+
+@media (max-width: 768px) {
+    .quiz-module {
+        width: 90%;
+    }
+
+    .question p, .results p {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-module {
+        width: 95%;
+    }
+
+    .question p, .results p {
+        font-size: 13px;
+    }
+
+    button {
+        padding: 7px 10px;
+        font-size: 13px;
+    }
 }

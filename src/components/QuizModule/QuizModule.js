@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './QuizModule.css'; // Stellen Sie sicher, dass der Pfad zur CSS-Datei korrekt ist
+import './QuizModule.css';
 
 function QuizModule({ title, questions }) {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

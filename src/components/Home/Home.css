@@ -1,7 +1,6 @@
-/* Basis-Stile */
 .quiz-title {
     margin-top: 50px;
-    font-family: "Segoe UI", sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     font-size: 36px;
     color: #004d40;
     text-transform: uppercase;
@@ -12,7 +11,7 @@
 .quiz-subtitle, .module-title, .module-text {
     text-align: center;
     font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 1.5rem; /* Gleiches Basis-Font-Size für Titel und Text */
+    font-size: 1.5rem;
     color: #666;
 }
 
@@ -22,11 +21,11 @@
 
 .h2 {
     margin-top: 10px;
-    font-size: 34px;
-    color: #004d40;
+    font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
+    color: #004d40;
 }
 
 .card-container {
@@ -55,45 +54,43 @@
     border: none;
 }
 
-/* Media Queries für unterschiedliche Bildschirmgrößen */
 @media (max-width: 1200px) {
     .quiz-title, .h2 {
-        font-size: 30px; /* Kleinere Schriftgröße für große Titel */
+        font-size: 30px;
     }
 }
 
 @media (max-width: 768px) {
     .quiz-title, .h2 {
-        font-size: 26px; /* Weitere Anpassung für Tablets */
+        font-size: 26px;
     }
     .quiz-subtitle, .module-title, .module-text {
-        font-size: 1.2rem; /* Anpassung der Schriftgröße für Tablets */
+        font-size: 1.2rem;
     }
 
     .custom-card .btn-primary {
-        width: 80%; /* Breitere Buttons auf kleineren Bildschirmen */
+        width: 80%;
     }
 }
 
 @media (max-width: 480px) {
     .quiz-title, .h2 {
-        font-size: 22px; /* Anpassung für Smartphones */
+        font-size: 22px;
     }
     .quiz-subtitle, .module-title, .module-text {
-        font-size: 1rem; /* Kleinere Schrift für Smartphones */
+        font-size: 1rem;
     }
 
     .custom-card {
-        margin: 10px; /* Reduzierter Abstand */
+        margin: 10px;
     }
 }
 
-/* Optional: Hochformat-spezifische Anpassungen für Smartphones */
 @media (max-width: 480px) and (orientation: portrait) {
     .quiz-title, .h2 {
-        font-size: 20px; /* Noch kleinere Schrift im Hochformat */
+        font-size: 20px;
     }
     .custom-card .btn-primary {
-        width: 100%; /* Buttons auf volle Breite im Hochformat */
+        width: 100%;
     }
 }

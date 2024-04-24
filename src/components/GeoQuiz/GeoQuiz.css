@@ -1,5 +1,5 @@
 .quiz {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     text-align: center;
     padding: 20px;
     max-width: 800px;
@@ -8,19 +8,19 @@
 
 .quiz img {
     width: 100%;
-    border-radius: 20px; /* Gerundete Ecken für die Bilder */
-    margin-bottom: 20px; /* Abstand zum Text */
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .options {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px; /* Abstand zwischen den Buttons */
+    gap: 10px;
 }
 
 .options button {
-    flex: 1 1 45%; /* Anpassen, um zwei Knöpfe pro Zeile darzustellen */
+    flex: 1 1 45%;
     padding: 10px;
     margin: 5px;
     background-color: #28a745;

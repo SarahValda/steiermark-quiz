@@ -59,12 +59,9 @@ function InteractiveMap() {
                     +
                 </button>
                 {selectedSpecialty && (
-                    <div className="map-popup" style={{
-                        top: '15%',
-                        left: '70%'
-                    }}>
-                        <h4>{selectedSpecialty.name}</h4>
+                    <div className="map-popup">
                         <img src={selectedSpecialty.image} alt={selectedSpecialty.name} style={{width: '100px'}}/>
+                        <h4>{selectedSpecialty.name}</h4>
                         <p>{selectedSpecialty.description}</p>
                     </div>
                 )}
