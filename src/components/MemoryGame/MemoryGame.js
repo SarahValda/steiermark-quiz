@@ -2,22 +2,32 @@ import React, { useState, useEffect } from 'react';
 import './MemoryGame.css';
 import peopleData from "../../data/peopleData";
 
+/**
+ * Eine Memory-Game Komponente, die Spielern ermöglicht, Paare von Karten zu finden und zu entsprechen.
+ * Die Karten zeigen bedeutende Persönlichkeiten der Steiermark.
+ */
 const MemoryGame = () => {
-    const [openCards, setOpenCards] = useState([]);
-    const [matched, setMatched] = useState([]);
-    const [moves, setMoves] = useState(0);
-    const [cards, setCards] = useState([]);
-    const [showPopup, setShowPopup] = useState(false);
-    const [popupContent, setPopupContent] = useState({});
+    const [openCards, setOpenCards] = useState([]);  // Positionen der momentan umgedrehten Karten
+    const [matched, setMatched] = useState([]);     // Speichert die Quellen der gematchten Karten
+    const [moves, setMoves] = useState(0);          // Anzahl der Züge
+    const [cards, setCards] = useState([]);         // Aktueller Zustand der Karten
+    const [showPopup, setShowPopup] = useState(false);  // Kontrolliert die Anzeige des Pop-ups
+    const [popupContent, setPopupContent] = useState({}); // Inhalt des anzuzeigenden Pop-ups
 
+    /**
+     * Shuffelt die Karten und initialisiert das Spiel, sobald die Komponente geladen wird.
+     */
     useEffect(() => {
         shuffleCards();
     }, []);
 
+    /**
+     * Erstellt eine zufällig sortierte Liste von Karten aus den gegebenen Daten.
+     */
     const shuffleCards = () => {
         const formattedCards = peopleData.reduce((acc, item) => [
             ...acc,
-            { ...item, src: item.src1, id: Math.random() },
+            { ...item, src: item.src1, id: Math.random() }, // Erstellt zwei Karten für jede Person
             { ...item, src: item.src2, id: Math.random() }
         ], []);
 
@@ -28,6 +38,10 @@ const MemoryGame = () => {
         setMoves(0);
     };
 
+    /**
+     * Behandelt das Klicken auf eine Karte und bestimmt, ob ein Match gefunden wurde.
+     * @param {number} index - Der Index der geklickten Karte.
+     */
     const handleCardClick = index => {
         if (!openCards.includes(index) && openCards.length < 2) {
             const newOpenCards = [...openCards, index];
@@ -48,7 +62,6 @@ const MemoryGame = () => {
                     setTimeout(() => {
                         setShowPopup(true);
                     }, 500);
-
                 }
                 setTimeout(() => {
                     setOpenCards([]);
@@ -58,6 +71,9 @@ const MemoryGame = () => {
         }
     };
 
+    /**
+     * Schließt das Informations-Popup.
+     */
     const closePopup = () => {
         setShowPopup(false);
     };

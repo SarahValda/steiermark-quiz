@@ -2,9 +2,19 @@ import React, { useState } from 'react';
 import './InteractiveMap.css';
 import kulinarikData from "../../data/kulinarikData";
 
+/**
+ * InteractiveMap Komponente: Ermöglicht Benutzern die Erkundung kulinarischer Spezialitäten der Steiermark.
+ * Nutzer können durch Klicken auf Karten-Buttons Informationen zu verschiedenen regionalen Spezialitäten anzeigen.
+ */
 function InteractiveMap() {
+    // Zustandsvariable, die die aktuell ausgewählte Spezialität speichert oder null, wenn keine ausgewählt ist.
     const [selectedSpecialty, setSelectedSpecialty] = useState(null);
 
+    /**
+     * Behandelt Klickereignisse auf die Regions-Buttons auf der Karte.
+     * Setzt die ausgewählte Spezialität zurück oder aktualisiert sie basierend auf der Benutzereingabe.
+     * @param {Object} specialty - Das Objekt der Spezialität, das beim Klicken auf einen Button übergeben wird.
+     */
     const handleRegionClick = (specialty) => {
         setSelectedSpecialty(specialty === selectedSpecialty ? null : specialty);
     };

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import './Timeline.css';
 
+// Anfangsdaten für historische Ereignisse
 const initialEvents = [
     { id: 'event-1', description: 'Gründung des Stiftes Rein', year: 1122 },
     { id: 'event-2', description: 'Gründung der Technischen Universität Graz', year: 1811 },
@@ -12,15 +13,22 @@ const initialEvents = [
     { id: 'event-7', description: 'Eröffnung der Südbahn', year: 1844 }
 ];
 
+/**
+ * Timeline Komponente: Ermöglicht Benutzern das Ordnen von historischen Ereignissen in chronologischer Reihenfolge.
+ */
 function Timeline() {
-    const [events, setEvents] = useState([...initialEvents]);
-    const [validationResult, setValidationResult] = useState('');
-    const [resultColor, setResultColor] = useState('');
+    const [events, setEvents] = useState([...initialEvents]);  // Aktueller Zustand der Ereigniskarten
+    const [validationResult, setValidationResult] = useState('');  // Speichert das Ergebnis der Überprüfung
+    const [resultColor, setResultColor] = useState('');  // Klassenname für die Textfarbe des Ergebnisses
 
+    /**
+     * Handhabt das Ende des Ziehvorgangs innerhalb der Drag-and-Drop-Kontext.
+     * @param {Object} result - Objekt mit Quellen- und Zielinformationen des gezogenen Elements.
+     */
     const onDragEnd = (result) => {
         const { source, destination } = result;
         if (!destination || (source.droppableId === destination.droppableId && source.index === destination.index)) {
-            return;
+            return; // Verhindert Updates ohne tatsächliche Positionsänderung
         }
 
         const newEvents = Array.from(events);
@@ -29,6 +37,9 @@ function Timeline() {
         setEvents(newEvents);
     };
 
+    /**
+     * Überprüft, ob die Ereignisse in der richtigen chronologischen Reihenfolge angeordnet sind.
+     */
     const checkOrder = () => {
         const currentOrder = events.map(event => event.year);
         const correctOrder = [...initialEvents].sort((a, b) => a.year - b.year).map(event => event.year);
@@ -41,9 +52,13 @@ function Timeline() {
         }
     };
 
+    /**
+     * Setzt das Spiel zurück zum Ausgangszustand.
+     */
     const resetGame = () => {
         setEvents([...initialEvents]);
         setValidationResult('');
+        setResultColor('');
     };
 
     return (

@@ -2,24 +2,37 @@ import React, { useState, useCallback } from 'react';
 import geoData from "../../data/geoData";
 import './GeoQuiz.css';
 
+/**
+ * GeoQuiz Komponente: Ein interaktives Quiz, das Nutzern Geografiefragen präsentiert.
+ * Nutzer können die Geografie der Steiermark anhand von Bildern erkunden und Fragen dazu beantworten.
+ */
 const GeoQuiz = () => {
-    const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [score, setScore] = useState(0);
-    const [showResults, setShowResults] = useState(false);  // Zustand, um Ergebnisse anzuzeigen
+    // Zustandsvariablen für die Verwaltung des Quiz-Status.
+    const [currentQuestion, setCurrentQuestion] = useState(0); // Aktuelle Frageindex
+    const [score, setScore] = useState(0); // Anzahl der korrekt beantworteten Fragen
+    const [showResults, setShowResults] = useState(false); // Status, um die Ergebnisse anzuzeigen
 
+    /**
+     * Behandelt das Klicken auf eine Antwortoption.
+     * Überprüft die Korrektheit der Antwort und aktualisiert den Score bzw. Frageindex.
+     * @param {string} option - Die gewählte Antwortoption.
+     */
     const handleAnswerOptionClick = useCallback((option) => {
         const isCorrect = option === geoData[currentQuestion].answer;
         if (isCorrect) {
-            setScore(score + 1);
+            setScore(score + 1); // Erhöhen des Scores bei korrekter Antwort
         }
         const nextQuestion = currentQuestion + 1;
         if (nextQuestion < geoData.length) {
-            setCurrentQuestion(nextQuestion);
+            setCurrentQuestion(nextQuestion); // Nächste Frage laden, falls verfügbar
         } else {
-            setShowResults(true);  // Zeige Ergebnisse an, wenn letzte Frage beantwortet wird
+            setShowResults(true); // Ergebnisse anzeigen, wenn keine weiteren Fragen vorhanden sind
         }
     }, [currentQuestion, score]);
 
+    /**
+     * Setzt das Quiz zurück und startet es neu.
+     */
     const restartQuiz = () => {
         setCurrentQuestion(0);
         setScore(0);
