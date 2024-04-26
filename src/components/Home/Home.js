@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card, Button } from 'react-bootstrap';
-import './Home.css';
+import { Card, Button, Image } from 'react-bootstrap';
+import SteiermarkAccordion from "../Accordion/Accordion";
+import './Home.css'
 
 function Home() {
     return (
         <div>
+            <Image src="/images/steiermark.jpg" className="centered-image" fluid alt="Landschaftsaufnahme aus der Südsteiermark" />
             <h1 className="quiz-title">Interaktives Steiermark-Quiz</h1>
-            <h2 className="quiz-subtitle">Entdecke Steiermark: Von majestätischen Bergen bis zu kulinarischen Köstlichkeiten – Ein interaktives Erlebnis durch Geschichte, Geografie, Kultur und bekannte Persönlichkeiten.</h2>
+            <h2 className="quiz-subtitle">Entdecke die Steiermark: Von majestätischen Bergen bis zu kulinarischen Köstlichkeiten – Ein interaktives Erlebnis durch Geschichte, Geografie, Kultur und bekannte Persönlichkeiten.</h2>
             <div className="card-container">
                 <Card className="custom-card">
                     <Card.Img variant="top" src="/images/geschichte.jpg" />
@@ -58,6 +60,7 @@ function Home() {
                     </Card.Body>
                 </Card>
             </div>
+            <SteiermarkAccordion />
         </div>
     );
 }

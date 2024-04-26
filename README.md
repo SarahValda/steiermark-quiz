@@ -22,12 +22,12 @@ My aim is to offer an engaging and informative experience that appeals to users 
 
 ## Getting Started
 
-To get started with the quiz, clone the repository and install all necessary dependencies.
-These dependencies were used in this project, which you can install using npm: 
-- bootstrap
-- react bootstrap
-- react-router-dom
-- react-beautiful-dnd
+Before you begin, make sure you have Node.js and npm installed on your computer. To get started with the quiz, clone the repository and install all necessary dependencies.
+These dependencies were used in this project, which you can install using npm:
+- Bootstrap: For styling and responsive layouts.
+- React Bootstrap: React components for Bootstrap.
+- React Router Dom: For handling routing.
+- React Beautiful DnD: A beautiful and accessible drag and drop for lists with React.
 
 ```bash
 npm install bootstrap
@@ -35,6 +35,12 @@ npm install react-bootstrap
 npm install react-router-dom
 npm install react-beautiful-dnd --save
 ````
+After installing the dependencies, you can start the development server to run the application locally:
+```bash
+npm start
+````
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Built With
 - HTML
