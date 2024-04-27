@@ -15,25 +15,38 @@ My aim is to offer an engaging and informative experience that appeals to users 
 
 ## Features
 
-- Thematic modules covering history, geography, culture, and notable personalities
-- Interactive timelines to sequence historical events
-- In-depth quiz questions following each module
-- Responsive design ensuring a seamless experience on various devices
+- **Thematic Modules**: These modules cover a range of subjects including history, geography, culture, and notable personalities, each offering comprehensive educational content.
+- **Interactive Timelines**: These tools allow users to sequence historical events, enhancing their understanding of significant milestones.
+- **Interactive Map**: This feature enables users to explore the culinary treasures of Styria, highlighting regional specialties and their origins.
+- **Memory Game**: This game tests users' memory and enhances their knowledge of notable personalities associated with Styria through engaging, interactive gameplay.
+- **Geographical Features Image Quiz**: Users can test their knowledge of Styria’s geographical landmarks through an engaging image quiz that challenges them to identify these locations.
+- **In-depth Quiz Questions**: Following each module, users are challenged with detailed quiz questions that test and reinforce their knowledge of the covered topics.
 
 ## Getting Started
 
 Before you begin, make sure you have Node.js and npm installed on your computer. To get started with the quiz, clone the repository and install all necessary dependencies.
+
+```bash
+git clone https://github.com/SarahValda/steiermark-quiz.git
+cd steiermark-quiz
+````
+
 These dependencies were used in this project, which you can install using npm:
 - Bootstrap: For styling and responsive layouts.
 - React Bootstrap: React components for Bootstrap.
 - React Router Dom: For handling routing.
 - React Beautiful DnD: A beautiful and accessible drag and drop for lists with React.
 
+### Install all dependencies in one go
+```bash
+npm install bootstrap react-bootstrap react-router-dom react-beautiful-dnd
+````
+Alternatively, you can install each dependency separately:
 ```bash
 npm install bootstrap
 npm install react-bootstrap
 npm install react-router-dom
-npm install react-beautiful-dnd --save
+npm install react-beautiful-dnd
 ````
 After installing the dependencies, you can start the development server to run the application locally:
 ```bash
@@ -42,25 +55,26 @@ npm start
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Built With
+### Built With
 - HTML
 - CSS
 - JavaScript
 - React 
 
-## Tested Browsers
+### Tested Browsers
 The application has been tested on the following browsers:
 
 - Chrome (Desktop & Mobile)
 - Firefox (Desktop & Mobile)
 - Edge (Desktop & Mobile)
 
-## Warnings and Browser Errors
-- tbd
+### Browser Compatibility and Warnings
+- Browser console might show warnings about performance for non-passive event listeners, which are typically caused by third-party cookies or browser extensions. 
+- To troubleshoot, try disabling extensions and clearing cookies, or use Incognito mode to determine if these are the sources of the issues.
 
 ## Learnings
 Throughout the development of this project, key learnings were:
-- Learning React was a challenge at first, but I gradually became more comfortable with its components, state management, and lifecycle methods. This framework has shown me the power of building interactive user interfaces.
+- Learning React was a challenge at first, but I gradually became more comfortable with its components and state management. This framework has shown me the power of building interactive user interfaces.
 - I learned how to use HTML to structure web pages and CSS to style them. Understanding responsive design principles helped me make web pages that look good on both desktops and mobile devices.
 - I practiced writing JavaScript to add interactive elements to web pages. This included handling user inputs, manipulating DOM elements, and making the web pages dynamic.
 - I started using Git for version control, which allowed me to track changes in my code and revert to previous versions when I made mistakes or wanted to review my progress.
