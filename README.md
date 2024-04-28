@@ -69,6 +69,7 @@ The application has been tested on the following browsers:
 - Edge (Desktop & Mobile)
 
 ### Browser Compatibility and Warnings
+Please note that when accessing the site on mobile devices, there may be display limitations that affect the graphical representation of the Timeline and the Interactive Steiermark Map, which might appear smaller than intended. Additionally, the Interactive Steiermark Map may not load correctly upon the first visit; a page refresh can resolve this issue.
 - Browser console might show warnings about performance for non-passive event listeners, which are typically caused by third-party cookies or browser extensions. 
 - To troubleshoot, try disabling extensions and clearing cookies, or use Incognito mode to determine if these are the sources of the issues.
 
