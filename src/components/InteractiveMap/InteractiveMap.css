@@ -3,8 +3,9 @@
     justify-content: center;
     position: relative;
     width: 100%;
-    height: auto; /* Höhe kann angepasst werden, wenn notwendig */
+    height: auto;
     margin-top: 40px;
+    margin-bottom: 30px;
 }
 
 .map-button {
@@ -12,8 +13,8 @@
     background: rgba(255, 255, 255, 0.5);
     border: none;
     cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 12px;
+    padding: 4px 4px;
+    border-radius: 13px;
     transition: background 0.3s ease;
     font-size: medium;
     font-weight: bold;
@@ -31,7 +32,7 @@
     border-radius: 7px;
     z-index: 1000;
     width: 230px;
-    top: 10%;
+    top: 20%;
     left: 70%;
     transform: translate(-50%, -50%);
     align-items: center;
@@ -45,12 +46,12 @@
 }
 
 #button-ausseerland {
-    top: 35%;
+    top: 33%;
     left: 33%;
 }
 
 #button-erzberg-leoben {
-    top: 50%;
+    top: 49%;
     left: 52%;
 }
 
@@ -60,7 +61,7 @@
 }
 
 #button-hochsteiermark {
-    top: 29%;
+    top: 28%;
     left: 57%;
 }
 
@@ -75,48 +76,61 @@
 }
 
 #button-oststeiermark {
-    top: 47%;
+    top: 46%;
     left: 63%;
 }
 
 #button-schladming-dachstein {
-    top: 51%;
+    top: 50%;
     left: 35%;
 }
 
 #button-suedsteiermark {
-    top: 86%;
+    top: 84%;
     left: 59%;
 }
 
 #button-thermen-vulkanland {
-    top: 76%;
+    top: 75%;
     left: 63%;
 }
-/* Tablets (mindestens 600px) */
-@media (min-width: 600px) {
+
+@media (max-width: 480px) {
     .map-container {
-        height: 400px; /* Festes Höhenmaß für bessere Kontrolle auf größeren Bildschirmen */
+        height: auto;
     }
     .map-button {
-        font-size: small; /* Anpassung der Schriftgröße für bessere Lesbarkeit */
-        padding: 5px 10px; /* Größeres Padding für bessere Interaktivität */
+        font-size: smaller;
+        padding: 4px 8px;
     }
     .map-popup {
-        width: 250px; /* Größeres Popup für mehr Inhalt */
+        width: 150px;
+        left: 80%;
     }
 }
 
-/* Desktops (mindestens 900px) */
-@media (min-width: 900px) {
+@media (min-width: 600px) {
     .map-container {
-        height: auto; /* Größere feste Höhe für Desktop-Ansichten */
+        height: auto;
     }
     .map-button {
-        font-size: medium; /* Zurück zur ursprünglichen Schriftgröße */
-        padding: 5px 9px; /* Weiter erhöhtes Padding */
+        font-size: small;
+        padding: 5px 8px;
     }
     .map-popup {
-        width: 300px; /* Weitere Erhöhung der Popup-Breite */
+        width: 250px;
+    }
+}
+
+@media (min-width: 900px) {
+    .map-container {
+        height: auto;
+    }
+    .map-button {
+        font-size: medium;
+        padding: 5px 9px;
+    }
+    .map-popup {
+        width: 300px;
     }
 }

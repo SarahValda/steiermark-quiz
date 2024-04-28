@@ -53,7 +53,7 @@ function Timeline() {
     };
 
     /**
-     * Setzt das Spiel zurück zum Ausgangszustand.
+     * Setzt das Spiel zurück in den Ausgangszustand.
      */
     const resetGame = () => {
         setEvents([...initialEvents]);

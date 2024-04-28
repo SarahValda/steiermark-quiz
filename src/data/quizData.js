@@ -24,19 +24,19 @@ const quizData = {
     ],
     geschichte: [
         {
-            question: "In welchem Jahr wurde die Steiermark offiziell Teil von Österreich?",
-            answers: ["1919", "1955", "1180", "1920"],
-            correct: "1180"
+            question: "In welchem Jahr wurde die Steiermark offiziell Teil des Herzogtums Österreich?",
+            answers: ["1919", "1955", "1192", "1820"],
+            correct: "1192"
         },
         {
             question: "Wer war der erste Herzog der Steiermark?",
-            answers: ["Otto der Große", "Leopold I", "Friedrich III", "Otakar III"],
-            correct: "Otakar III"
+            answers: ["Otto der Große", "Leopold I", "Friedrich III", "Ottokar IV"],
+            correct: "Ottokar IV"
         },
         {
-            question: "Welche historische Persönlichkeit ist mit der Stadt Graz eng verbunden?",
-            answers: ["Wolfgang Amadeus Mozart", "Archduke Johann", "Sigmund Freud", "Ludwig Boltzmann"],
-            correct: "Archduke Johann"
+            question: "Welche historische Persönlichkeit ist mit der Steiermark eng verbunden?",
+            answers: ["Wolfgang Amadeus Mozart", "Erzherzog Johann", "Sigmund Freud", "Ludwig Boltzmann"],
+            correct: "Erzherzog Johann"
         },
         {
             question: "In welchem Jahrhundert begann die industrielle Entwicklung in der Steiermark?",
@@ -47,22 +47,22 @@ const quizData = {
     kulinarik: [
         {
             question: "Welches Gericht ist eine traditionelle Spezialität der Steiermark?",
-            answers: ["Wiener Schnitzel", "Steirisches Backhendl", "Tiroler Knödel", "Kärntner Kasnudeln"],
-            correct: "Steirisches Backhendl"
+            answers: ["Schnitzel", "Backhendl", "Knödel", "Kasnudeln"],
+            correct: "Backhendl"
         },
         {
             question: "Was ist ein typisches Produkt, das in der Steiermark hergestellt wird?",
-            answers: ["Salzburger Nockerl", "Steirisches Kürbiskernöl", "Wiener Marzipan", "Kärntner Bier"],
-            correct: "Steirisches Kürbiskernöl"
+            answers: ["Nockerl", "Kürbiskernöl", "Marzipan", "Bier"],
+            correct: "Kürbiskernöl"
         },
         {
             question: "Welcher Wein ist bekannt aus der Südsteiermark?",
-            answers: ["Zweigelt", "Grüner Veltliner", "Chardonnay", "Riesling"],
-            correct: "Grüner Veltliner"
+            answers: ["Zweigelt", "Sauvignon Blanc", "Grüner Veltliner", "Grauburgunder"],
+            correct: "Sauvignon Blanc"
         },
         {
-            question: "Was ist ein typisches Produkt, das in der Steiermark hergestellt wird?",
-            answers: ["Ein süßes Dessert", "Ein kleiner Imbiss", "Eine kalte Platte mit Aufschnitt", "Ein warmes Mittagessen"],
+            question: "Was bekommt man typischerweise in einer steirischen Buschenschänke?",
+            answers: ["Kaffee & Kuchen", "Einen kleinen Imbiss", "Eine kalte Platte mit Aufschnitt", "Ein warmes Mittagessen"],
             correct: "Eine kalte Platte mit Aufschnitt"
         }
     ],
@@ -83,12 +83,11 @@ const quizData = {
             correct: "Peter Rosegger"
         },
         {
-            question: "Welche Persönlichkeit ist bekannt für ihre Pionierarbeit im Automobilbereich?",
-            answers: ["Ferdinand Porsche", "Niki Lauda", "Siegfried Marcus", "Max Reisch"],
-            correct: "Ferdinand Porsche"
+            question: "Welche Modedesignerin aus der Steiermark ist bekannt für ihre nachhaltigen und innovativen Modekollektionen?",
+            answers: ["Lena Hoschek", "Helga Ruthner", "Susanne Bisovsky", "Marina Hoermanseder"],
+            correct: "Lena Hoschek"
         }
     ]
 };
-
 
 export default quizData;

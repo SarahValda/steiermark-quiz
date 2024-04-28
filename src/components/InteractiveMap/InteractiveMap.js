@@ -5,6 +5,8 @@ import kulinarikData from "../../data/kulinarikData";
 /**
  * InteractiveMap Komponente: Ermöglicht Benutzern die Erkundung kulinarischer Spezialitäten der Steiermark.
  * Nutzer können durch Klicken auf Karten-Buttons Informationen zu verschiedenen regionalen Spezialitäten anzeigen.
+ *
+ * Bitte beachten: Die Karte wird möglicherweise erst nach dem Neuladen der Seite korrekt angezeigt.
  */
 function InteractiveMap() {
     // Zustandsvariable, die die aktuell ausgewählte Spezialität speichert oder null, wenn keine ausgewählt ist.

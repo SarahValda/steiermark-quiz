@@ -75,6 +75,23 @@
     height: auto;
 }
 
+@media (max-width: 480px) {
+    .timeline-container {
+        padding: 30px 15px;
+    }
+    .timeline-image {
+        max-width: 100%;
+        height: auto;
+    }
+    .event-card {
+        padding: 10px;
+        margin-bottom: 12px;
+    }
+    .button-container {
+        justify-content: space-around;
+    }
+}
+
 @media (min-width: 600px) {
     .timeline-container {
         padding: 30px 15px;

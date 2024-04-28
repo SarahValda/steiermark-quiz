@@ -10,6 +10,10 @@ import KulinarikModule from './components/KulinarikModule/KulinarikModule';
 import PersoenlichkeitenModule from './components/PersoenlichkeitenModule/PersoenlichkeitenModule';
 import GeografieModule from "./components/GeografieModule/GeografieModule";
 
+/**
+ * Die Hauptanwendungskomponente, die Routing und Layout für die gesamte Anwendung bereitstellt.
+ * Enthält Header, Footer und definiert Routing-Pfade für verschiedene Module.
+ */
 function App() {
     return (
         <Router>

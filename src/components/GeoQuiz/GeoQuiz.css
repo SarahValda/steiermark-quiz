@@ -16,7 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .options button {
@@ -26,7 +26,7 @@
     background-color: #28a745;
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -35,8 +35,28 @@
     background-color: #218838;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .options button {
-        flex-basis: 90%; /* Macht Buttons breiter auf kleinen Bildschirmen */
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (min-width: 600px) {
+    .quiz {
+        padding: 30px;
+    }
+
+    .options button {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 900px) {
+    .quiz {
+        padding: 40px;
+    }
+    .options button {
+        font-size: 16px;
     }
 }

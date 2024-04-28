@@ -3,6 +3,11 @@ import InteractiveMap from '../InteractiveMap/InteractiveMap';
 import QuizModule from '../QuizModule/QuizModule';
 import quizData from '../../data/quizData';
 
+/**
+ * Die KulinarikModule-Komponente zeigt ein Modul mit kulinarischen Informationen über die Steiermark an.
+ * Sie enthält eine interaktive Karte und ein Quiz zur Kulinarik.
+ */
+
 function KulinarikModule() {
     return (
         <div>

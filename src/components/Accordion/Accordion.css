@@ -17,7 +17,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
     transition: background-color 0.3s ease;
-    width: 100%;
+    width: 90%;
 }
 
 .steiermark-accordion .accordion-button:not(.collapsed) {
@@ -32,21 +32,38 @@
     transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 768px) {
-    .steiermark-accordion .accordion-button {
-        font-size: 18px;
-    }
-    .steiermark-accordion .accordion-body {
-        font-size: 16px;
-    }
-}
-
 @media (max-width: 480px) {
     .steiermark-accordion .accordion-button {
         font-size: 16px;
+        padding: 12px;
+    }
+
+    .steiermark-accordion .accordion-body {
+        font-size: 14px;
         padding: 10px;
     }
+}
+
+@media (min-width: 600px) {
+    .steiermark-accordion .accordion-button {
+        font-size: 18px;
+        padding: 14px;
+    }
+
     .steiermark-accordion .accordion-body {
-        padding: 10px;
+        font-size: 16px;
+        padding: 14px;
+    }
+}
+
+@media (min-width: 900px) {
+    .steiermark-accordion .accordion-button {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .steiermark-accordion .accordion-body {
+        font-size: 16px;
+        padding: 16px;
     }
 }

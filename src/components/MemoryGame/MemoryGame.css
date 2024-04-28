@@ -75,6 +75,23 @@
     max-width: 400px;
 }
 
+@media (max-width: 480px) {
+    .cards-grid {
+        grid-gap: 15px;
+    }
+
+    .memory-card {
+        width: calc(33.33% - 10px);
+        height: calc(33.33% - 10px);
+    }
+
+    .popup {
+        width: 80%;
+        max-width: none;
+        position: fixed;
+    }
+}
+
 @media (max-width: 600px) {
     .cards-grid {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -87,9 +104,26 @@
     }
 
     .popup {
-        width: 70%; /* Nutzt 90% der Bildschirmbreite */
-        max-width: none; /* Erlaubt dem Popup, sich voll auszudehnen */
-        left: 5%; /* Zentriert das Popup basierend auf der neuen Breite */
+        width: 70%;
+        max-width: none;
+        left: 5%;
         transform: translateY(-50%);
+    }
+}
+
+@media (min-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(4, 150px);
+        grid-gap: 15px;
+    }
+
+    .memory-card {
+        width: 150px;
+        height: 150px;
+    }
+
+    .popup {
+        width: 40%;
+        max-width: 400px;
     }
 }

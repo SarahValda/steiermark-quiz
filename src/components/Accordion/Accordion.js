@@ -2,7 +2,7 @@ import React from 'react';
 import { Accordion, Card } from 'react-bootstrap';
 import './Accordion.css'
 
-// Diese Komponente bietet ein Accordion, das verschiedene Informationen über die Steiermark zeigt.
+// Diese Komponente gibt ein Accordion aus, das verschiedene Informationen über die Steiermark zeigt.
 function SteiermarkAccordion() {
     return (
         <div className="steiermark-accordion">

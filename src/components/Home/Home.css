@@ -1,11 +1,5 @@
-.centered-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-}
 .quiz-title {
-    margin-top: 50px;
+    margin-top: 30px;
     font-family: 'Segoe UI', Arial, sans-serif;
     font-size: 36px;
     color: #004d40;
@@ -53,30 +47,21 @@
 }
 
 .custom-card .btn-primary {
-    width: 60%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     margin: auto;
     display: block;
+}
+
+.custom-card .btn-primary:hover {
     background-color: #218838;
-    border: none;
-}
-
-@media (max-width: 1200px) {
-    .quiz-title, .h2 {
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    .quiz-title, .h2 {
-        font-size: 26px;
-    }
-    .quiz-subtitle, .module-title, .module-text {
-        font-size: 1.2rem;
-    }
-
-    .custom-card .btn-primary {
-        width: 80%;
-    }
+    transform: scale(1.05);
+    text-decoration: none;
 }
 
 @media (max-width: 480px) {
@@ -86,17 +71,28 @@
     .quiz-subtitle, .module-title, .module-text {
         font-size: 14px;
     }
-
     .custom-card {
         margin: 10px;
     }
 }
 
-@media (max-width: 480px) and (orientation: portrait) {
+@media (min-width: 600px) {
     .quiz-title, .h2 {
-        font-size: 20px;
+        font-size: 26px;
+    }
+    .quiz-subtitle, .module-title, .module-text {
+        font-size: 16px;
     }
     .custom-card .btn-primary {
-        width: 100%;
+        width: 80%;
+    }
+}
+
+@media (min-width: 900px) {
+    .quiz-title, .h2 {
+        font-size: 30px;
+    }
+    .quiz-subtitle, .module-title, .module-text {
+        font-size: 15px;
     }
 }

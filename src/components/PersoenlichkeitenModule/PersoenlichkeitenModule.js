@@ -3,6 +3,11 @@ import MemoryGame from "../MemoryGame/MemoryGame";
 import QuizModule from '../QuizModule/QuizModule';
 import quizData from '../../data/quizData';
 
+/**
+ * Die PersoenlichkeitenModule-Komponente zeigt ein Modul mit bekannten Persönlichkeiten aus der Steiermark an.
+ * Sie enthält ein Memory-Spiel und ein Quiz zu Persönlichkeiten.
+ */
+
 function PersoenlichkeitenModule() {
     return (
         <div className="module geschichte">

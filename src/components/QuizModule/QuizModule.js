@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
 import './QuizModule.css';
 
+/**
+ * Die QuizModule-Komponente ist verantwortlich für die Darstellung eines Quiz-Moduls.
+ * Sie zeigt eine Liste von Fragen an und ermöglicht es dem Benutzer, Antworten auszuwählen.
+ * Am Ende des Quiz werden die Ergebnisse angezeigt, einschließlich der Punktzahl und der korrekten Antworten.
+ *
+ * @param {string} title - Der Titel des Quiz-Moduls.
+ * @param {Array<Object>} questions - Eine Liste von Frage-Objekten, jedes mit einer Frage, einer Liste von Antworten und der korrekten Antwort.
+ */
 function QuizModule({ title, questions }) {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [userAnswers, setUserAnswers] = useState([]);
     const [showResults, setShowResults] = useState(false);
 
+    /**
+     * Verarbeitet die Auswahl einer Antwort.
+     * @param {string} selectedAnswer - Die ausgewählte Antwort.
+     */
     const handleAnswer = (selectedAnswer) => {
         const nextQuestionIndex = currentQuestionIndex + 1;
         setUserAnswers(userAnswers.concat([{
@@ -21,6 +33,10 @@ function QuizModule({ title, questions }) {
         }
     };
 
+    /**
+     * Berechnet die Gesamtpunktzahl des Benutzers.
+     * @returns {number} - Die Gesamtpunktzahl.
+     */
     const calculateScore = () => {
         return userAnswers.reduce((score, answer) => {
             return score + (answer.answer === answer.correctAnswer ? 1 : 0);

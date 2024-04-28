@@ -16,7 +16,7 @@ My aim is to offer an engaging and informative experience that appeals to users 
 ## Features
 
 - **Thematic Modules**: These modules cover a range of subjects including history, geography, culture, and notable personalities, each offering comprehensive educational content.
-- **Interactive Timelines**: These tools allow users to sequence historical events, enhancing their understanding of significant milestones.
+- **Interactive Timeline**: These tools allow users to sequence historical events, enhancing their understanding of significant milestones.
 - **Interactive Map**: This feature enables users to explore the culinary treasures of Styria, highlighting regional specialties and their origins.
 - **Memory Game**: This game tests users' memory and enhances their knowledge of notable personalities associated with Styria through engaging, interactive gameplay.
 - **Geographical Features Image Quiz**: Users can test their knowledge of Styria’s geographical landmarks through an engaging image quiz that challenges them to identify these locations.
@@ -74,13 +74,13 @@ The application has been tested on the following browsers:
 
 ## Learnings
 Throughout the development of this project, key learnings were:
-- Learning React was a challenge at first, but I gradually became more comfortable with its components and state management. This framework has shown me the power of building interactive user interfaces.
+- Learning React was a challenge at first, but I gradually became more comfortable with its components and state management.
 - I learned how to use HTML to structure web pages and CSS to style them. Understanding responsive design principles helped me make web pages that look good on both desktops and mobile devices.
 - I practiced writing JavaScript to add interactive elements to web pages. This included handling user inputs, manipulating DOM elements, and making the web pages dynamic.
 - I started using Git for version control, which allowed me to track changes in my code and revert to previous versions when I made mistakes or wanted to review my progress.
 - Throughout this project, I faced various bugs and issues. Learning to debug and solve problems efficiently was crucial and taught me a lot about resilience and logical thinking.
 - I realized that knowing how to find solutions and learning from existing resources online can be just as important as knowing how to code.
-- I learned that writing clear comments and maintaining good documentation is not just for others but also for myself, to help me understand my own code when I return to it later.
+- I learned that writing clear comments and maintaining good documentation is not just for others but also for myself, to help me understand my own code.
 - Finally, I learned that in technology, the learning never stops. Staying curious and continuously improving my skills is essential.
 
 I hope that you have enjoyed using the app and that it has provided you with valuable insights into the fascinating region of Styria. Happy learning!

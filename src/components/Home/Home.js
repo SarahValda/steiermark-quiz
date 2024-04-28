@@ -1,13 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card, Button, Image } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import SteiermarkAccordion from "../Accordion/Accordion";
 import './Home.css'
+
+/**
+ * Die Home-Komponente ist die Startseite der Anwendung.
+ * Sie präsentiert eine Auswahl von Modulen, die es dem Benutzer ermöglichen, verschiedene Aspekte der Steiermark zu erkunden.
+ * Jedes Modul besteht aus einem Bild, einem kurzen Text und einem Link, der den Benutzer zu einer detaillierten Ansicht des jeweiligen Themas führt.
+ * Unter den Modulen befindet sich auch ein Akkordeon-Menü, das zusätzliche Informationen über die Steiermark bereitstellt.
+ */
 
 function Home() {
     return (
         <div>
-            <Image src="/images/steiermark.jpg" className="centered-image" fluid alt="Landschaftsaufnahme aus der Südsteiermark" />
             <h1 className="quiz-title">Interaktives Steiermark-Quiz</h1>
             <h2 className="quiz-subtitle">Entdecke die Steiermark: Von majestätischen Bergen bis zu kulinarischen Köstlichkeiten – Ein interaktives Erlebnis durch Geschichte, Geografie, Kultur und bekannte Persönlichkeiten.</h2>
             <div className="card-container">
